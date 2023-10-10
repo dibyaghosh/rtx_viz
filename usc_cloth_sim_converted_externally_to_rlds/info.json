@@ -1,0 +1,14 @@
+{
+  "repr": "tfds.core.DatasetInfo(\n    name='usc_cloth_sim_converted_externally_to_rlds',\n    full_name='usc_cloth_sim_converted_externally_to_rlds/0.1.0',\n    description=\"\"\"\n    Franka cloth interaction tasks\n    \"\"\",\n    homepage='https://uscresl.github.io/dmfd/',\n    data_path='gs://gresearch/robotics/usc_cloth_sim_converted_externally_to_rlds/0.1.0',\n    file_format=tfrecord,\n    download_size=Unknown size,\n    dataset_size=254.52 MiB,\n    features=FeaturesDict({\n        'episode_metadata': FeaturesDict({\n            'file_path': Text(shape=(), dtype=string),\n        }),\n        'steps': Dataset({\n            'action': Tensor(shape=(4,), dtype=float32),\n            'discount': Scalar(shape=(), dtype=float32),\n            'is_first': bool,\n            'is_last': bool,\n            'is_terminal': bool,\n            'language_embedding': Tensor(shape=(512,), dtype=float32),\n            'language_instruction': Text(shape=(), dtype=string),\n            'observation': FeaturesDict({\n                'image': Image(shape=(32, 32, 3), dtype=uint8),\n            }),\n            'reward': Scalar(shape=(), dtype=float32),\n        }),\n    }),\n    supervised_keys=None,\n    disable_shuffling=False,\n    splits={\n        'train': <SplitInfo num_examples=800, num_shards=2>,\n        'val': <SplitInfo num_examples=200, num_shards=1>,\n    },\n    citation=\"\"\"@article{salhotra2022dmfd,\n        author={Salhotra, Gautam and Liu, I-Chun Arthur and Dominguez-Kuhne, Marcus and Sukhatme, Gaurav S.},\n        journal={IEEE Robotics and Automation Letters},\n        title={Learning Deformable Object Manipulation From Expert Demonstrations},\n        year={2022},\n        volume={7},\n        number={4},\n        pages={8775-8782},\n        doi={10.1109/LRA.2022.3187843}\n    }\"\"\",\n)",
+  "size": "254.52 MiB",
+  "n_traj": 800,
+  "image_keys": {
+    "image": [
+      32,
+      32,
+      3
+    ]
+  },
+  "depth_keys": {},
+  "text_keys": []
+}

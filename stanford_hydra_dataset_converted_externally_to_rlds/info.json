@@ -1,0 +1,19 @@
+{
+  "repr": "tfds.core.DatasetInfo(\n    name='stanford_hydra_dataset_converted_externally_to_rlds',\n    full_name='stanford_hydra_dataset_converted_externally_to_rlds/0.1.0',\n    description=\"\"\"\n    Franka solving long-horizon tasks\n    \"\"\",\n    homepage='https://sites.google.com/view/hydra-il-2023',\n    data_path='gs://gresearch/robotics/stanford_hydra_dataset_converted_externally_to_rlds/0.1.0',\n    file_format=tfrecord,\n    download_size=Unknown size,\n    dataset_size=72.48 GiB,\n    features=FeaturesDict({\n        'episode_metadata': FeaturesDict({\n            'file_path': Text(shape=(), dtype=string),\n        }),\n        'steps': Dataset({\n            'action': Tensor(shape=(7,), dtype=float32),\n            'discount': Scalar(shape=(), dtype=float32),\n            'is_dense': Scalar(shape=(), dtype=bool),\n            'is_first': bool,\n            'is_last': bool,\n            'is_terminal': bool,\n            'language_embedding': Tensor(shape=(512,), dtype=float32),\n            'language_instruction': Text(shape=(), dtype=string),\n            'observation': FeaturesDict({\n                'image': Image(shape=(240, 320, 3), dtype=uint8),\n                'state': Tensor(shape=(27,), dtype=float32),\n                'wrist_image': Image(shape=(240, 320, 3), dtype=uint8),\n            }),\n            'reward': Scalar(shape=(), dtype=float32),\n        }),\n    }),\n    supervised_keys=None,\n    disable_shuffling=False,\n    splits={\n        'train': <SplitInfo num_examples=570, num_shards=350>,\n    },\n    citation=\"\"\"@article{belkhale2023hydra,\n     title={HYDRA: Hybrid Robot Actions for Imitation Learning},\n     author={Belkhale, Suneel and Cui, Yuchen and Sadigh, Dorsa},\n     journal={arxiv},\n     year={2023}\n    }\"\"\",\n)",
+  "size": "72.48 GiB",
+  "n_traj": 570,
+  "image_keys": {
+    "image": [
+      240,
+      320,
+      3
+    ],
+    "wrist_image": [
+      240,
+      320,
+      3
+    ]
+  },
+  "depth_keys": {},
+  "text_keys": []
+}

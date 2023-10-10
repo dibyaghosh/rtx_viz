@@ -1,0 +1,3 @@
+{
+  "natural_language_instruction": "The task requires pushing a T-shaped block (gray) to a fixed target (green) with a circular end-effector (blue). Both observation and control frequencies are 10Hz."
+}

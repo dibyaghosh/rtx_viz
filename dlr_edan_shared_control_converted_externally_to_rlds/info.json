@@ -1,0 +1,14 @@
+{
+  "repr": "tfds.core.DatasetInfo(\n    name='dlr_edan_shared_control_converted_externally_to_rlds',\n    full_name='dlr_edan_shared_control_converted_externally_to_rlds/0.1.0',\n    description=\"\"\"\n    wheelchair with arm performing shelf pick tasks\n    \"\"\",\n    homepage='https://ieeexplore.ieee.org/document/9341156',\n    data_path='gs://gresearch/robotics/dlr_edan_shared_control_converted_externally_to_rlds/0.1.0',\n    file_format=tfrecord,\n    download_size=Unknown size,\n    dataset_size=3.09 GiB,\n    features=FeaturesDict({\n        'episode_metadata': FeaturesDict({\n            'file_path': Text(shape=(), dtype=string),\n        }),\n        'steps': Dataset({\n            'action': Tensor(shape=(7,), dtype=float32),\n            'discount': Scalar(shape=(), dtype=float32),\n            'is_first': bool,\n            'is_last': bool,\n            'is_terminal': bool,\n            'language_embedding': Tensor(shape=(512,), dtype=float32),\n            'language_instruction': Text(shape=(), dtype=string),\n            'observation': FeaturesDict({\n                'image': Image(shape=(360, 640, 3), dtype=uint8),\n                'state': Tensor(shape=(7,), dtype=float32),\n            }),\n            'reward': Scalar(shape=(), dtype=float32),\n        }),\n    }),\n    supervised_keys=None,\n    disable_shuffling=False,\n    splits={\n        'train': <SplitInfo num_examples=104, num_shards=29>,\n    },\n    citation=\"\"\"@inproceedings{vogel_edan_2020,\n    \ttitle = {EDAN - an EMG-Controlled Daily Assistant to Help People with Physical Disabilities},\n    \tlanguage = {en},\n    \tbooktitle = {2020 {IEEE}/{RSJ} {International} {Conference} on {Intelligent} {Robots} and {Systems} ({IROS})},\n    \tauthor = {Vogel, J\u00f6rn and Hagengruber, Annette and Iskandar, Maged and Quere, Gabriel and Leipscher, Ulrike and Bustamante, Samuel and Dietrich, Alexander and Hoeppner, Hannes and Leidner, Daniel and Albu-Sch\u00e4ffer, Alin},\n    \tyear = {2020}\n    }\n    @inproceedings{quere_shared_2020,\n    \taddress = {Paris, France},\n    \ttitle = {Shared {Control} {Templates} for {Assistive} {Robotics}},\n    \tlanguage = {en},\n    \tbooktitle = {2020 {IEEE} {International} {Conference} on {Robotics} and {Automation} ({ICRA})},\n    \tauthor = {Quere, Gabriel and Hagengruber, Annette and Iskandar, Maged and Bustamante, Samuel and Leidner, Daniel and Stulp, Freek and Vogel, Joern},\n    \tyear = {2020},\n    \tpages = {7},\n    }\"\"\",\n)",
+  "size": "3.09 GiB",
+  "n_traj": 104,
+  "image_keys": {
+    "image": [
+      360,
+      640,
+      3
+    ]
+  },
+  "depth_keys": {},
+  "text_keys": []
+}

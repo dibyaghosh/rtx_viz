@@ -1,0 +1,14 @@
+{
+  "repr": "tfds.core.DatasetInfo(\n    name='dlr_sara_pour_converted_externally_to_rlds',\n    full_name='dlr_sara_pour_converted_externally_to_rlds/0.1.0',\n    description=\"\"\"\n    pouring liquid from a bottle into a mug\n    \"\"\",\n    homepage='https://elib.dlr.de/193739/1/padalkar2023rlsct.pdf',\n    data_path='gs://gresearch/robotics/dlr_sara_pour_converted_externally_to_rlds/0.1.0',\n    file_format=tfrecord,\n    download_size=Unknown size,\n    dataset_size=2.92 GiB,\n    features=FeaturesDict({\n        'episode_metadata': FeaturesDict({\n            'file_path': Text(shape=(), dtype=string),\n        }),\n        'steps': Dataset({\n            'action': Tensor(shape=(7,), dtype=float32),\n            'discount': Scalar(shape=(), dtype=float32),\n            'is_first': bool,\n            'is_last': bool,\n            'is_terminal': bool,\n            'language_embedding': Tensor(shape=(512,), dtype=float32),\n            'language_instruction': Text(shape=(), dtype=string),\n            'observation': FeaturesDict({\n                'image': Image(shape=(480, 640, 3), dtype=uint8),\n                'state': Tensor(shape=(6,), dtype=float32),\n            }),\n            'reward': Scalar(shape=(), dtype=float32),\n        }),\n    }),\n    supervised_keys=None,\n    disable_shuffling=False,\n    splits={\n        'train': <SplitInfo num_examples=100, num_shards=31>,\n    },\n    citation=\"\"\"@inproceedings{padalkar2023guiding,\n      title={Guiding Reinforcement Learning with Shared Control Templates},\n      author={Padalkar, Abhishek and Quere, Gabriel and Steinmetz, Franz and Raffin, Antonin and Nieuwenhuisen, Matthias and Silv{'e}rio, Jo{\\~a}o and Stulp, Freek},\n      booktitle={40th IEEE International Conference on Robotics and Automation, ICRA 2023},\n      year={2023},\n      organization={IEEE}\n    }\"\"\",\n)",
+  "size": "2.92 GiB",
+  "n_traj": 100,
+  "image_keys": {
+    "image": [
+      480,
+      640,
+      3
+    ]
+  },
+  "depth_keys": {},
+  "text_keys": []
+}

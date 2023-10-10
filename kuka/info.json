@@ -1,0 +1,21 @@
+{
+  "repr": "tfds.core.DatasetInfo(\n    name='kuka',\n    full_name='kuka/0.1.0',\n    description=\"\"\"\n    Bin picking and rearrangement tasks\n    \"\"\",\n    homepage='https://arxiv.org/abs/1806.10293',\n    data_path='gs://gresearch/robotics/kuka/0.1.0',\n    file_format=tfrecord,\n    download_size=Unknown size,\n    dataset_size=778.02 GiB,\n    features=FeaturesDict({\n        'steps': Dataset({\n            'action': FeaturesDict({\n                'base_displacement_vector': Tensor(shape=(2,), dtype=float32),\n                'base_displacement_vertical_rotation': Tensor(shape=(1,), dtype=float32),\n                'gripper_closedness_action': Tensor(shape=(1,), dtype=float32),\n                'rotation_delta': Tensor(shape=(3,), dtype=float32),\n                'terminate_episode': Tensor(shape=(3,), dtype=int32),\n                'world_vector': Tensor(shape=(3,), dtype=float32),\n            }),\n            'is_first': bool,\n            'is_last': bool,\n            'is_terminal': bool,\n            'observation': FeaturesDict({\n                'clip_function_input/base_pose_tool_reached': Tensor(shape=(7,), dtype=float32),\n                'clip_function_input/workspace_bounds': Tensor(shape=(3, 3), dtype=float32),\n                'gripper_closed': Tensor(shape=(1,), dtype=float32),\n                'height_to_bottom': Tensor(shape=(1,), dtype=float32),\n                'image': Image(shape=(512, 640, 3), dtype=uint8),\n                'natural_language_embedding': Tensor(shape=(512,), dtype=float32),\n                'natural_language_instruction': string,\n                'task_id': Tensor(shape=(1,), dtype=float32),\n            }),\n            'reward': Scalar(shape=(), dtype=float32),\n        }),\n        'success': bool,\n    }),\n    supervised_keys=None,\n    disable_shuffling=False,\n    splits={\n        'train': <SplitInfo num_examples=580392, num_shards=1024>,\n    },\n    citation=\"\"\"@article{kalashnikov2018qt,\n      title={Qt-opt: Scalable deep reinforcement learning for vision-based robotic manipulation},\n      author={Kalashnikov, Dmitry and Irpan, Alex and Pastor, Peter and Ibarz, Julian and Herzog, Alexander and Jang, Eric and Quillen, Deirdre and Holly, Ethan and Kalakrishnan, Mrinal and Vanhoucke, Vincent and others},\n      journal={arXiv preprint arXiv:1806.10293},\n      year={2018}\n    }\"\"\",\n)",
+  "size": "778.02 GiB",
+  "n_traj": 580392,
+  "image_keys": {
+    "image": [
+      512,
+      640,
+      3
+    ]
+  },
+  "depth_keys": {
+    "clip_function_input/workspace_bounds": [
+      3,
+      3
+    ]
+  },
+  "text_keys": [
+    "natural_language_instruction"
+  ]
+}

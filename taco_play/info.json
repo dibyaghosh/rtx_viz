@@ -1,0 +1,31 @@
+{
+  "repr": "tfds.core.DatasetInfo(\n    name='taco_play',\n    full_name='taco_play/0.1.0',\n    description=\"\"\"\n    Franka arm interacting with kitchen\n    \"\"\",\n    homepage='https://www.kaggle.com/datasets/oiermees/taco-robot',\n    data_path='gs://gresearch/robotics/taco_play/0.1.0',\n    file_format=tfrecord,\n    download_size=Unknown size,\n    dataset_size=47.77 GiB,\n    features=FeaturesDict({\n        'steps': Dataset({\n            'action': FeaturesDict({\n                'actions': Tensor(shape=(7,), dtype=float32),\n                'rel_actions_gripper': Tensor(shape=(7,), dtype=float32),\n                'rel_actions_world': Tensor(shape=(7,), dtype=float32),\n                'terminate_episode': float32,\n            }),\n            'is_first': bool,\n            'is_last': bool,\n            'is_terminal': bool,\n            'observation': FeaturesDict({\n                'depth_gripper': Tensor(shape=(84, 84), dtype=float32),\n                'depth_static': Tensor(shape=(150, 200), dtype=float32),\n                'natural_language_embedding': Tensor(shape=(512,), dtype=float32),\n                'natural_language_instruction': string,\n                'rgb_gripper': Image(shape=(84, 84, 3), dtype=uint8),\n                'rgb_static': Image(shape=(150, 200, 3), dtype=uint8),\n                'robot_obs': Tensor(shape=(15,), dtype=float32),\n                'structured_language_instruction': string,\n            }),\n            'reward': Scalar(shape=(), dtype=float32),\n        }),\n    }),\n    supervised_keys=None,\n    disable_shuffling=False,\n    splits={\n        'test': <SplitInfo num_examples=361, num_shards=64>,\n        'train': <SplitInfo num_examples=3242, num_shards=511>,\n    },\n    citation=\"\"\"@inproceedings{rosete2022tacorl,\n    author = {Erick Rosete-Beas and Oier Mees and Gabriel Kalweit and Joschka Boedecker and Wolfram Burgard},\n    title = {Latent Plans for Task Agnostic Offline Reinforcement Learning},\n    journal = {Proceedings of the 6th Conference on Robot Learning (CoRL)},\n    year = {2022}\n    }\n    @inproceedings{mees23hulc2,\n    title={Grounding  Language  with  Visual  Affordances  over  Unstructured  Data},\n    author={Oier Mees and Jessica Borja-Diaz and Wolfram Burgard},\n    booktitle = {Proceedings of the IEEE International Conference on Robotics and Automation (ICRA)},\n    year={2023},\n    address = {London, UK}\n    }\"\"\",\n)",
+  "size": "47.77 GiB",
+  "n_traj": 3242,
+  "image_keys": {
+    "rgb_gripper": [
+      84,
+      84,
+      3
+    ],
+    "rgb_static": [
+      150,
+      200,
+      3
+    ]
+  },
+  "depth_keys": {
+    "depth_static": [
+      150,
+      200
+    ],
+    "depth_gripper": [
+      84,
+      84
+    ]
+  },
+  "text_keys": [
+    "structured_language_instruction",
+    "natural_language_instruction"
+  ]
+}

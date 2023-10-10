@@ -1,0 +1,16 @@
+{
+  "repr": "tfds.core.DatasetInfo(\n    name='bc_z',\n    full_name='bc_z/0.1.0',\n    description=\"\"\"\n    Teleoped Google robot doing mostly pick-place from a table\n    \"\"\",\n    homepage='https://www.kaggle.com/datasets/google/bc-z-robot/discussion/309201',\n    data_path='gs://gresearch/robotics/bc_z/0.1.0',\n    file_format=tfrecord,\n    download_size=Unknown size,\n    dataset_size=80.54 GiB,\n    features=FeaturesDict({\n        'steps': Dataset({\n            'action': FeaturesDict({\n                'future/axis_angle_residual': Tensor(shape=(30,), dtype=float32),\n                'future/target_close': Tensor(shape=(10,), dtype=int64),\n                'future/xyz_residual': Tensor(shape=(30,), dtype=float32),\n            }),\n            'is_first': bool,\n            'is_last': bool,\n            'is_terminal': bool,\n            'observation': FeaturesDict({\n                'episode_success': float32,\n                'image': Image(shape=(171, 213, 3), dtype=uint8),\n                'natural_language_embedding': Tensor(shape=(512,), dtype=float32),\n                'natural_language_instruction': string,\n                'present/autonomous': int64,\n                'present/axis_angle': Tensor(shape=(3,), dtype=float32),\n                'present/intervention': int64,\n                'present/sensed_close': Tensor(shape=(1,), dtype=float32),\n                'present/xyz': Tensor(shape=(3,), dtype=float32),\n                'sequence_length': int64,\n            }),\n            'reward': Scalar(shape=(), dtype=float32),\n        }),\n    }),\n    supervised_keys=None,\n    disable_shuffling=False,\n    splits={\n        'train': <SplitInfo num_examples=39350, num_shards=1024>,\n        'val': <SplitInfo num_examples=3914, num_shards=64>,\n    },\n    citation=\"\"\"@inproceedings{jang2021bc,\n    title={{BC}-Z: Zero-Shot Task Generalization with Robotic Imitation Learning},\n    author={Eric Jang and Alex Irpan and Mohi Khansari and Daniel Kappler and Frederik Ebert and Corey Lynch and Sergey Levine and Chelsea Finn},\n    booktitle={5th Annual Conference on Robot Learning},\n    year={2021},\n    url={https://openreview.net/forum?id=8kbp23tSGYv}}\"\"\",\n)",
+  "size": "80.54 GiB",
+  "n_traj": 39350,
+  "image_keys": {
+    "image": [
+      171,
+      213,
+      3
+    ]
+  },
+  "depth_keys": {},
+  "text_keys": [
+    "natural_language_instruction"
+  ]
+}

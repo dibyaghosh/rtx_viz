@@ -1,0 +1,31 @@
+{
+  "repr": "tfds.core.DatasetInfo(\n    name='berkeley_cable_routing',\n    full_name='berkeley_cable_routing/0.1.0',\n    description=\"\"\"\n    Routing cable into clamps on table top\n    \"\"\",\n    homepage='https://sites.google.com/view/cablerouting/home',\n    data_path='gs://gresearch/robotics/berkeley_cable_routing/0.1.0',\n    file_format=tfrecord,\n    download_size=Unknown size,\n    dataset_size=4.67 GiB,\n    features=FeaturesDict({\n        'steps': Dataset({\n            'action': FeaturesDict({\n                'rotation_delta': Tensor(shape=(3,), dtype=float32),\n                'terminate_episode': float32,\n                'world_vector': Tensor(shape=(3,), dtype=float32),\n            }),\n            'is_first': bool,\n            'is_last': bool,\n            'is_terminal': bool,\n            'observation': FeaturesDict({\n                'image': Image(shape=(128, 128, 3), dtype=uint8),\n                'natural_language_embedding': Tensor(shape=(512,), dtype=float32),\n                'natural_language_instruction': string,\n                'robot_state': Tensor(shape=(7,), dtype=float32),\n                'top_image': Image(shape=(128, 128, 3), dtype=uint8),\n                'wrist225_image': Image(shape=(128, 128, 3), dtype=uint8),\n                'wrist45_image': Image(shape=(128, 128, 3), dtype=uint8),\n            }),\n            'reward': Scalar(shape=(), dtype=float32),\n        }),\n    }),\n    supervised_keys=None,\n    disable_shuffling=False,\n    splits={\n        'test': <SplitInfo num_examples=165, num_shards=4>,\n        'train': <SplitInfo num_examples=1482, num_shards=64>,\n    },\n    citation=\"\"\"@article{luo2023multistage,\n      author    = {Jianlan Luo and Charles Xu and Xinyang Geng and Gilbert Feng and Kuan Fang and Liam Tan and Stefan Schaal and Sergey Levine},\n      title     = {Multi-Stage Cable Routing through Hierarchical Imitation Learning},\n      journal   = {arXiv pre-print},\n      year      = {2023},\n      url       = {https://arxiv.org/abs/2307.08927},\n    }\"\"\",\n)",
+  "size": "4.67 GiB",
+  "n_traj": 1482,
+  "image_keys": {
+    "wrist45_image": [
+      128,
+      128,
+      3
+    ],
+    "image": [
+      128,
+      128,
+      3
+    ],
+    "wrist225_image": [
+      128,
+      128,
+      3
+    ],
+    "top_image": [
+      128,
+      128,
+      3
+    ]
+  },
+  "depth_keys": {},
+  "text_keys": [
+    "natural_language_instruction"
+  ]
+}

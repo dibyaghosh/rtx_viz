@@ -1,0 +1,21 @@
+{
+  "repr": "tfds.core.DatasetInfo(\n    name='jaco_play',\n    full_name='jaco_play/0.1.0',\n    description=\"\"\"\n    Jaco 2 pick place on table top\n    \"\"\",\n    homepage='https://github.com/clvrai/clvr_jaco_play_dataset',\n    data_path='gs://gresearch/robotics/jaco_play/0.1.0',\n    file_format=tfrecord,\n    download_size=Unknown size,\n    dataset_size=9.24 GiB,\n    features=FeaturesDict({\n        'steps': Dataset({\n            'action': FeaturesDict({\n                'gripper_closedness_action': Tensor(shape=(1,), dtype=float32),\n                'terminate_episode': Tensor(shape=(3,), dtype=int32),\n                'world_vector': Tensor(shape=(3,), dtype=float32),\n            }),\n            'is_first': bool,\n            'is_last': bool,\n            'is_terminal': bool,\n            'observation': FeaturesDict({\n                'end_effector_cartesian_pos': Tensor(shape=(7,), dtype=float32),\n                'end_effector_cartesian_velocity': Tensor(shape=(6,), dtype=float32),\n                'image': Image(shape=(224, 224, 3), dtype=uint8),\n                'image_wrist': Image(shape=(224, 224, 3), dtype=uint8),\n                'joint_pos': Tensor(shape=(8,), dtype=float32),\n                'natural_language_embedding': Tensor(shape=(512,), dtype=float32),\n                'natural_language_instruction': string,\n            }),\n            'reward': Scalar(shape=(), dtype=float32),\n        }),\n    }),\n    supervised_keys=None,\n    disable_shuffling=False,\n    splits={\n        'test': <SplitInfo num_examples=109, num_shards=8>,\n        'train': <SplitInfo num_examples=976, num_shards=128>,\n    },\n    citation=\"\"\"@software{dass2023jacoplay,\n      author = {Dass, Shivin and Yapeter, Jullian and Zhang, Jesse and Zhang, Jiahui\n                and Pertsch, Karl and Nikolaidis, Stefanos and Lim, Joseph J.},\n      title = {CLVR Jaco Play Dataset},\n      url = {https://github.com/clvrai/clvr_jaco_play_dataset},\n      version = {1.0.0},\n      year = {2023}\n    }\"\"\",\n)",
+  "size": "9.24 GiB",
+  "n_traj": 976,
+  "image_keys": {
+    "image": [
+      224,
+      224,
+      3
+    ],
+    "image_wrist": [
+      224,
+      224,
+      3
+    ]
+  },
+  "depth_keys": {},
+  "text_keys": [
+    "natural_language_instruction"
+  ]
+}

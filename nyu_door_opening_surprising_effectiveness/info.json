@@ -1,0 +1,16 @@
+{
+  "repr": "tfds.core.DatasetInfo(\n    name='nyu_door_opening_surprising_effectiveness',\n    full_name='nyu_door_opening_surprising_effectiveness/0.1.0',\n    description=\"\"\"\n    Hello robot opening cabinets, microwaves etc\n    \"\"\",\n    homepage='https://jyopari.github.io/VINN/',\n    data_path='gs://gresearch/robotics/nyu_door_opening_surprising_effectiveness/0.1.0',\n    file_format=tfrecord,\n    download_size=Unknown size,\n    dataset_size=7.12 GiB,\n    features=FeaturesDict({\n        'steps': Dataset({\n            'action': FeaturesDict({\n                'gripper_closedness_action': Tensor(shape=(1,), dtype=float32),\n                'rotation_delta': Tensor(shape=(3,), dtype=float32),\n                'terminate_episode': float32,\n                'world_vector': Tensor(shape=(3,), dtype=float32),\n            }),\n            'is_first': bool,\n            'is_last': bool,\n            'is_terminal': bool,\n            'observation': FeaturesDict({\n                'image': Image(shape=(720, 960, 3), dtype=uint8),\n                'natural_language_embedding': Tensor(shape=(512,), dtype=float32),\n                'natural_language_instruction': string,\n            }),\n            'reward': Scalar(shape=(), dtype=float32),\n        }),\n    }),\n    supervised_keys=None,\n    disable_shuffling=False,\n    splits={\n        'test': <SplitInfo num_examples=49, num_shards=8>,\n        'train': <SplitInfo num_examples=435, num_shards=64>,\n    },\n    citation=\"\"\"@misc{pari2021surprising,\n        title={The Surprising Effectiveness of Representation Learning for Visual Imitation}, \n        author={Jyothish Pari and Nur Muhammad Shafiullah and Sridhar Pandian Arunachalam and Lerrel Pinto},\n        year={2021},\n        eprint={2112.01511},\n        archivePrefix={arXiv},\n        primaryClass={cs.RO}\n    }\"\"\",\n)",
+  "size": "7.12 GiB",
+  "n_traj": 435,
+  "image_keys": {
+    "image": [
+      720,
+      960,
+      3
+    ]
+  },
+  "depth_keys": {},
+  "text_keys": [
+    "natural_language_instruction"
+  ]
+}

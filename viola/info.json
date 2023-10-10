@@ -1,0 +1,21 @@
+{
+  "repr": "tfds.core.DatasetInfo(\n    name='viola',\n    full_name='viola/0.1.0',\n    description=\"\"\"\n    Franka robot interacting with stylized kitchen tasks\n    \"\"\",\n    homepage='https://ut-austin-rpl.github.io/VIOLA/',\n    data_path='gs://gresearch/robotics/viola/0.1.0',\n    file_format=tfrecord,\n    download_size=Unknown size,\n    dataset_size=10.40 GiB,\n    features=FeaturesDict({\n        'steps': Dataset({\n            'action': FeaturesDict({\n                'gripper_closedness_action': float32,\n                'rotation_delta': Tensor(shape=(3,), dtype=float32),\n                'terminate_episode': float32,\n                'world_vector': Tensor(shape=(3,), dtype=float32),\n            }),\n            'is_first': bool,\n            'is_last': bool,\n            'is_terminal': bool,\n            'observation': FeaturesDict({\n                'agentview_rgb': Image(shape=(224, 224, 3), dtype=uint8),\n                'ee_states': Tensor(shape=(16,), dtype=float32),\n                'eye_in_hand_rgb': Image(shape=(224, 224, 3), dtype=uint8),\n                'gripper_states': Tensor(shape=(1,), dtype=float32),\n                'joint_states': Tensor(shape=(7,), dtype=float32),\n                'natural_language_embedding': Tensor(shape=(512,), dtype=float32),\n                'natural_language_instruction': string,\n            }),\n            'reward': Scalar(shape=(), dtype=float32),\n        }),\n    }),\n    supervised_keys=None,\n    disable_shuffling=False,\n    splits={\n        'test': <SplitInfo num_examples=15, num_shards=7>,\n        'train': <SplitInfo num_examples=135, num_shards=81>,\n    },\n    citation=\"\"\"@article{zhu2022viola,\n      title={VIOLA: Imitation Learning for Vision-Based Manipulation with Object Proposal Priors},\n      author={Zhu, Yifeng and Joshi, Abhishek and Stone, Peter and Zhu, Yuke},\n      journal={6th Annual Conference on Robot Learning (CoRL)},\n      year={2022}\n    }\"\"\",\n)",
+  "size": "10.40 GiB",
+  "n_traj": 135,
+  "image_keys": {
+    "eye_in_hand_rgb": [
+      224,
+      224,
+      3
+    ],
+    "agentview_rgb": [
+      224,
+      224,
+      3
+    ]
+  },
+  "depth_keys": {},
+  "text_keys": [
+    "natural_language_instruction"
+  ]
+}

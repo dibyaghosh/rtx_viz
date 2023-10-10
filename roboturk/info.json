@@ -1,0 +1,16 @@
+{
+  "repr": "tfds.core.DatasetInfo(\n    name='roboturk',\n    full_name='roboturk/0.1.0',\n    description=\"\"\"\n    Cloth folding, bowl stacking\n    \"\"\",\n    homepage='https://roboturk.stanford.edu/dataset_real.html',\n    data_path='gs://gresearch/robotics/roboturk/0.1.0',\n    file_format=tfrecord,\n    download_size=Unknown size,\n    dataset_size=45.39 GiB,\n    features=FeaturesDict({\n        'steps': Dataset({\n            'action': FeaturesDict({\n                'gripper_closedness_action': Tensor(shape=(1,), dtype=float32),\n                'rotation_delta': Tensor(shape=(3,), dtype=float32),\n                'terminate_episode': float32,\n                'world_vector': Tensor(shape=(3,), dtype=float32),\n            }),\n            'is_first': bool,\n            'is_last': bool,\n            'is_terminal': bool,\n            'observation': FeaturesDict({\n                'front_rgb': Image(shape=(480, 640, 3), dtype=uint8),\n                'natural_language_embedding': Tensor(shape=(512,), dtype=float32),\n                'natural_language_instruction': string,\n            }),\n            'reward': Scalar(shape=(), dtype=float32),\n        }),\n    }),\n    supervised_keys=None,\n    disable_shuffling=False,\n    splits={\n        'test': <SplitInfo num_examples=199, num_shards=60>,\n        'train': <SplitInfo num_examples=1796, num_shards=494>,\n    },\n    citation=\"\"\"@inproceedings{mandlekar2019scaling,\n              title={Scaling robot supervision to hundreds of hours with roboturk: Robotic manipulation dataset through human reasoning and dexterity},\n              author={Mandlekar, Ajay and Booher, Jonathan and Spero, Max and Tung, Albert and Gupta, Anchit and Zhu, Yuke and Garg, Animesh and Savarese, Silvio and Fei-Fei, Li},\n              booktitle={2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},\n              pages={1048--1055},\n              year={2019},\n              organization={IEEE}\n            }\"\"\",\n)",
+  "size": "45.39 GiB",
+  "n_traj": 1796,
+  "image_keys": {
+    "front_rgb": [
+      480,
+      640,
+      3
+    ]
+  },
+  "depth_keys": {},
+  "text_keys": [
+    "natural_language_instruction"
+  ]
+}

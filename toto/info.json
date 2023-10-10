@@ -1,0 +1,16 @@
+{
+  "repr": "tfds.core.DatasetInfo(\n    name='toto',\n    full_name='toto/0.1.0',\n    description=\"\"\"\n    Franka scooping and pouring tasks\n    \"\"\",\n    homepage='https://toto-benchmark.org/',\n    data_path='gs://gresearch/robotics/toto/0.1.0',\n    file_format=tfrecord,\n    download_size=Unknown size,\n    dataset_size=127.66 GiB,\n    features=FeaturesDict({\n        'steps': Dataset({\n            'action': FeaturesDict({\n                'open_gripper': bool,\n                'rotation_delta': Tensor(shape=(3,), dtype=float32),\n                'terminate_episode': float32,\n                'world_vector': Tensor(shape=(3,), dtype=float32),\n            }),\n            'is_first': bool,\n            'is_last': bool,\n            'is_terminal': bool,\n            'observation': FeaturesDict({\n                'image': Image(shape=(480, 640, 3), dtype=uint8),\n                'natural_language_embedding': Tensor(shape=(512,), dtype=float32),\n                'natural_language_instruction': string,\n                'state': Tensor(shape=(7,), dtype=float32),\n            }),\n            'reward': Scalar(shape=(), dtype=float32),\n        }),\n    }),\n    supervised_keys=None,\n    disable_shuffling=False,\n    splits={\n        'test': <SplitInfo num_examples=101, num_shards=52>,\n        'train': <SplitInfo num_examples=902, num_shards=415>,\n    },\n    citation=\"\"\"@inproceedings{zhou2023train,\n      author={Zhou, Gaoyue and Dean, Victoria and Srirama, Mohan Kumar and Rajeswaran, Aravind and Pari, Jyothish and Hatch, Kyle and Jain, Aryan and Yu, Tianhe and Abbeel, Pieter and Pinto, Lerrel and Finn, Chelsea and Gupta, Abhinav},\n      booktitle={2023 IEEE International Conference on Robotics and Automation (ICRA)}, \n      title={Train Offline, Test Online: A Real Robot Learning Benchmark}, \n      year={2023},\n     }\"\"\",\n)",
+  "size": "127.66 GiB",
+  "n_traj": 902,
+  "image_keys": {
+    "image": [
+      480,
+      640,
+      3
+    ]
+  },
+  "depth_keys": {},
+  "text_keys": [
+    "natural_language_instruction"
+  ]
+}

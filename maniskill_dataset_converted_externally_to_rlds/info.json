@@ -1,0 +1,54 @@
+{
+  "repr": "tfds.core.DatasetInfo(\n    name='maniskill_dataset_converted_externally_to_rlds',\n    full_name='maniskill_dataset_converted_externally_to_rlds/0.1.0',\n    description=\"\"\"\n    Simulated Franka performing various manipulation tasks\n    \"\"\",\n    homepage='https://github.com/haosulab/ManiSkill2',\n    data_path='gs://gresearch/robotics/maniskill_dataset_converted_externally_to_rlds/0.1.0',\n    file_format=tfrecord,\n    download_size=Unknown size,\n    dataset_size=151.05 GiB,\n    features=FeaturesDict({\n        'episode_metadata': FeaturesDict({\n            'episode_id': Text(shape=(), dtype=string),\n            'file_path': Text(shape=(), dtype=string),\n        }),\n        'steps': Dataset({\n            'action': Tensor(shape=(7,), dtype=float32),\n            'discount': Scalar(shape=(), dtype=float32),\n            'is_first': bool,\n            'is_last': bool,\n            'is_terminal': bool,\n            'language_embedding': Tensor(shape=(512,), dtype=float32),\n            'language_instruction': Text(shape=(), dtype=string),\n            'observation': FeaturesDict({\n                'base_pose': Tensor(shape=(7,), dtype=float32),\n                'depth': Image(shape=(256, 256, 1), dtype=uint16),\n                'image': Image(shape=(256, 256, 3), dtype=uint8),\n                'main_camera_cam2world_gl': Tensor(shape=(4, 4), dtype=float32),\n                'main_camera_extrinsic_cv': Tensor(shape=(4, 4), dtype=float32),\n                'main_camera_intrinsic_cv': Tensor(shape=(3, 3), dtype=float32),\n                'state': Tensor(shape=(18,), dtype=float32),\n                'target_object_or_part_final_pose': Tensor(shape=(7,), dtype=float32),\n                'target_object_or_part_final_pose_valid': Tensor(shape=(7,), dtype=uint8),\n                'target_object_or_part_initial_pose': Tensor(shape=(7,), dtype=float32),\n                'target_object_or_part_initial_pose_valid': Tensor(shape=(7,), dtype=uint8),\n                'tcp_pose': Tensor(shape=(7,), dtype=float32),\n                'wrist_camera_cam2world_gl': Tensor(shape=(4, 4), dtype=float32),\n                'wrist_camera_extrinsic_cv': Tensor(shape=(4, 4), dtype=float32),\n                'wrist_camera_intrinsic_cv': Tensor(shape=(3, 3), dtype=float32),\n                'wrist_depth': Image(shape=(256, 256, 1), dtype=uint16),\n                'wrist_image': Image(shape=(256, 256, 3), dtype=uint8),\n            }),\n            'reward': Scalar(shape=(), dtype=float32),\n        }),\n    }),\n    supervised_keys=None,\n    disable_shuffling=False,\n    splits={\n        'train': <SplitInfo num_examples=30213, num_shards=1024>,\n    },\n    citation=\"\"\"@inproceedings{gu2023maniskill2,\n      title={ManiSkill2: A Unified Benchmark for Generalizable Manipulation Skills},\n      author={Gu, Jiayuan and Xiang, Fanbo and Li, Xuanlin and Ling, Zhan and Liu, Xiqiang and Mu, Tongzhou and Tang, Yihe and Tao, Stone and Wei, Xinyue and Yao, Yunchao and Yuan, Xiaodi and Xie, Pengwei and Huang, Zhiao and Chen, Rui and Su, Hao},\n      booktitle={International Conference on Learning Representations},\n      year={2023}\n    }\"\"\",\n)",
+  "size": "151.05 GiB",
+  "n_traj": 30213,
+  "image_keys": {
+    "wrist_image": [
+      256,
+      256,
+      3
+    ],
+    "image": [
+      256,
+      256,
+      3
+    ]
+  },
+  "depth_keys": {
+    "wrist_camera_intrinsic_cv": [
+      3,
+      3
+    ],
+    "main_camera_cam2world_gl": [
+      4,
+      4
+    ],
+    "depth": [
+      256,
+      256,
+      1
+    ],
+    "wrist_camera_extrinsic_cv": [
+      4,
+      4
+    ],
+    "wrist_depth": [
+      256,
+      256,
+      1
+    ],
+    "main_camera_intrinsic_cv": [
+      3,
+      3
+    ],
+    "wrist_camera_cam2world_gl": [
+      4,
+      4
+    ],
+    "main_camera_extrinsic_cv": [
+      4,
+      4
+    ]
+  },
+  "text_keys": []
+}

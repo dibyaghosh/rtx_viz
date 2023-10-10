@@ -1,0 +1,21 @@
+{
+  "repr": "tfds.core.DatasetInfo(\n    name='columbia_cairlab_pusht_real',\n    full_name='columbia_cairlab_pusht_real/0.1.0',\n    description=\"\"\"\n    UR5 planar pushing tasks\n    \"\"\",\n    homepage='https://github.com/columbia-ai-robotics/diffusion_policy',\n    data_path='gs://gresearch/robotics/columbia_cairlab_pusht_real/0.1.0',\n    file_format=tfrecord,\n    download_size=Unknown size,\n    dataset_size=2.80 GiB,\n    features=FeaturesDict({\n        'steps': Dataset({\n            'action': FeaturesDict({\n                'gripper_closedness_action': float32,\n                'rotation_delta': Tensor(shape=(3,), dtype=float32),\n                'terminate_episode': float32,\n                'world_vector': Tensor(shape=(3,), dtype=float32),\n            }),\n            'is_first': bool,\n            'is_last': bool,\n            'is_terminal': bool,\n            'observation': FeaturesDict({\n                'image': Image(shape=(240, 320, 3), dtype=uint8),\n                'natural_language_embedding': Tensor(shape=(512,), dtype=float32),\n                'natural_language_instruction': string,\n                'robot_state': Tensor(shape=(2,), dtype=float32),\n                'wrist_image': Image(shape=(240, 320, 3), dtype=uint8),\n            }),\n            'reward': Scalar(shape=(), dtype=float32),\n        }),\n    }),\n    supervised_keys=None,\n    disable_shuffling=False,\n    splits={\n        'test': <SplitInfo num_examples=14, num_shards=4>,\n        'train': <SplitInfo num_examples=122, num_shards=32>,\n    },\n    citation=\"\"\"@inproceedings{chi2023diffusionpolicy,\n    \ttitle={Diffusion Policy: Visuomotor Policy Learning via Action Diffusion},\n    \tauthor={Chi, Cheng and Feng, Siyuan and Du, Yilun and Xu, Zhenjia and Cousineau, Eric and Burchfiel, Benjamin and Song, Shuran},\n    \tbooktitle={Proceedings of Robotics: Science and Systems (RSS)},\n    \tyear={2023}\n    }\"\"\",\n)",
+  "size": "2.80 GiB",
+  "n_traj": 122,
+  "image_keys": {
+    "wrist_image": [
+      240,
+      320,
+      3
+    ],
+    "image": [
+      240,
+      320,
+      3
+    ]
+  },
+  "depth_keys": {},
+  "text_keys": [
+    "natural_language_instruction"
+  ]
+}

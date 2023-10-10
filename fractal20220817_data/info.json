@@ -1,0 +1,29 @@
+{
+  "repr": "tfds.core.DatasetInfo(\n    name='fractal20220817_data',\n    full_name='fractal20220817_data/0.1.0',\n    description=\"\"\"\n    Table-top manipulation with 17 objects\n    \"\"\",\n    homepage='https://ai.googleblog.com/2022/12/rt-1-robotics-transformer-for-real.html',\n    data_path='gs://gresearch/robotics/fractal20220817_data/0.1.0',\n    file_format=tfrecord,\n    download_size=Unknown size,\n    dataset_size=111.07 GiB,\n    features=FeaturesDict({\n        'aspects': FeaturesDict({\n            'already_success': bool,\n            'feasible': bool,\n            'has_aspects': bool,\n            'success': bool,\n            'undesirable': bool,\n        }),\n        'attributes': FeaturesDict({\n            'collection_mode': int64,\n            'collection_mode_name': string,\n            'data_type': int64,\n            'data_type_name': string,\n            'env': int64,\n            'env_name': string,\n            'location': int64,\n            'location_name': string,\n            'objects_family': int64,\n            'objects_family_name': string,\n            'task_family': int64,\n            'task_family_name': string,\n        }),\n        'steps': Dataset({\n            'action': FeaturesDict({\n                'base_displacement_vector': Tensor(shape=(2,), dtype=float32),\n                'base_displacement_vertical_rotation': Tensor(shape=(1,), dtype=float32),\n                'gripper_closedness_action': Tensor(shape=(1,), dtype=float32),\n                'rotation_delta': Tensor(shape=(3,), dtype=float32),\n                'terminate_episode': Tensor(shape=(3,), dtype=int32),\n                'world_vector': Tensor(shape=(3,), dtype=float32),\n            }),\n            'is_first': bool,\n            'is_last': bool,\n            'is_terminal': bool,\n            'observation': FeaturesDict({\n                'base_pose_tool_reached': Tensor(shape=(7,), dtype=float32),\n                'gripper_closed': Tensor(shape=(1,), dtype=float32),\n                'gripper_closedness_commanded': Tensor(shape=(1,), dtype=float32),\n                'height_to_bottom': Tensor(shape=(1,), dtype=float32),\n                'image': Image(shape=(256, 320, 3), dtype=uint8),\n                'natural_language_embedding': Tensor(shape=(512,), dtype=float32),\n                'natural_language_instruction': string,\n                'orientation_box': Tensor(shape=(2, 3), dtype=float32),\n                'orientation_start': Tensor(shape=(4,), dtype=float32),\n                'robot_orientation_positions_box': Tensor(shape=(3, 3), dtype=float32),\n                'rotation_delta_to_go': Tensor(shape=(3,), dtype=float32),\n                'src_rotation': Tensor(shape=(4,), dtype=float32),\n                'vector_to_go': Tensor(shape=(3,), dtype=float32),\n                'workspace_bounds': Tensor(shape=(3, 3), dtype=float32),\n            }),\n            'reward': Scalar(shape=(), dtype=float32),\n        }),\n    }),\n    supervised_keys=None,\n    disable_shuffling=False,\n    splits={\n        'train': <SplitInfo num_examples=87212, num_shards=1024>,\n    },\n    citation=\"\"\"@article{brohan2022rt,\n      title={Rt-1: Robotics transformer for real-world control at scale},\n      author={Brohan, Anthony and Brown, Noah and Carbajal, Justice and Chebotar, Yevgen and Dabis, Joseph and Finn, Chelsea and Gopalakrishnan, Keerthana and Hausman, Karol and Herzog, Alex and Hsu, Jasmine and others},\n      journal={arXiv preprint arXiv:2212.06817},\n      year={2022}\n    }\"\"\",\n)",
+  "size": "111.07 GiB",
+  "n_traj": 87212,
+  "image_keys": {
+    "image": [
+      256,
+      320,
+      3
+    ]
+  },
+  "depth_keys": {
+    "orientation_box": [
+      2,
+      3
+    ],
+    "robot_orientation_positions_box": [
+      3,
+      3
+    ],
+    "workspace_bounds": [
+      3,
+      3
+    ]
+  },
+  "text_keys": [
+    "natural_language_instruction"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "repr": "tfds.core.DatasetInfo(\n    name='language_table',\n    full_name='language_table/0.0.1',\n    description=\"\"\"\n    \n    \"\"\",\n    homepage='https://www.tensorflow.org/datasets/catalog/language_table',\n    data_path='gs://gresearch/robotics/language_table/0.0.1',\n    file_format=tfrecord,\n    download_size=Unknown size,\n    dataset_size=399.23 GiB,\n    features=FeaturesDict({\n        'episode_id': string,\n        'steps': Dataset({\n            'action': Tensor(shape=(2,), dtype=float32),\n            'is_first': bool,\n            'is_last': bool,\n            'is_terminal': bool,\n            'observation': FeaturesDict({\n                'effector_target_translation': Tensor(shape=(2,), dtype=float32),\n                'effector_translation': Tensor(shape=(2,), dtype=float32),\n                'instruction': Tensor(shape=(512,), dtype=int32),\n                'rgb': Image(shape=(360, 640, 3), dtype=uint8),\n            }),\n            'reward': Scalar(shape=(), dtype=float32),\n        }),\n    }),\n    supervised_keys=None,\n    disable_shuffling=False,\n    splits={\n        'train': <SplitInfo num_examples=442226, num_shards=500>,\n    },\n    citation=\"\"\"\"\"\",\n)",
+  "size": "399.23 GiB",
+  "n_traj": 442226,
+  "image_keys": {
+    "rgb": [
+      360,
+      640,
+      3
+    ]
+  },
+  "depth_keys": {},
+  "text_keys": []
+}

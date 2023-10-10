@@ -1,0 +1,16 @@
+{
+  "repr": "tfds.core.DatasetInfo(\n    name='bridge',\n    full_name='bridge/0.1.0',\n    description=\"\"\"\n    WidowX interacting with toy kitchens\n    \"\"\",\n    homepage='https://rail-berkeley.github.io/bridgedata/',\n    data_path='gs://gresearch/robotics/bridge/0.1.0',\n    file_format=tfrecord,\n    download_size=Unknown size,\n    dataset_size=387.49 GiB,\n    features=FeaturesDict({\n        'steps': Dataset({\n            'action': FeaturesDict({\n                'open_gripper': bool,\n                'rotation_delta': Tensor(shape=(3,), dtype=float32),\n                'terminate_episode': float32,\n                'world_vector': Tensor(shape=(3,), dtype=float32),\n            }),\n            'is_first': bool,\n            'is_last': bool,\n            'is_terminal': bool,\n            'observation': FeaturesDict({\n                'image': Image(shape=(480, 640, 3), dtype=uint8),\n                'natural_language_embedding': Tensor(shape=(512,), dtype=float32),\n                'natural_language_instruction': string,\n                'state': Tensor(shape=(7,), dtype=float32),\n            }),\n            'reward': Scalar(shape=(), dtype=float32),\n        }),\n    }),\n    supervised_keys=None,\n    disable_shuffling=False,\n    splits={\n        'test': <SplitInfo num_examples=3475, num_shards=512>,\n        'train': <SplitInfo num_examples=25460, num_shards=1024>,\n    },\n    citation=\"\"\"@inproceedings{walke2023bridgedata,\n        title={BridgeData V2: A Dataset for Robot Learning at Scale},\n        author={Walke, Homer and Black, Kevin and Lee, Abraham and Kim, Moo Jin and Du, Max and Zheng, Chongyi and Zhao, Tony and Hansen-Estruch, Philippe and Vuong, Quan and He, Andre and Myers, Vivek and Fang, Kuan and Finn, Chelsea and Levine, Sergey},\n        booktitle={Conference on Robot Learning (CoRL)},\n        year={2023}\n    }\"\"\",\n)",
+  "size": "387.49 GiB",
+  "n_traj": 25460,
+  "image_keys": {
+    "image": [
+      480,
+      640,
+      3
+    ]
+  },
+  "depth_keys": {},
+  "text_keys": [
+    "natural_language_instruction"
+  ]
+}

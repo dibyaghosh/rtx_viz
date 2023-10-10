@@ -1,0 +1,14 @@
+{
+  "repr": "tfds.core.DatasetInfo(\n    name='dlr_sara_grid_clamp_converted_externally_to_rlds',\n    full_name='dlr_sara_grid_clamp_converted_externally_to_rlds/0.1.0',\n    description=\"\"\"\n    place grid clamp onto grids on table\n    \"\"\",\n    homepage='https://www.researchsquare.com/article/rs-3289569/v1',\n    data_path='gs://gresearch/robotics/dlr_sara_grid_clamp_converted_externally_to_rlds/0.1.0',\n    file_format=tfrecord,\n    download_size=Unknown size,\n    dataset_size=1.65 GiB,\n    features=FeaturesDict({\n        'episode_metadata': FeaturesDict({\n            'file_path': Text(shape=(), dtype=string),\n        }),\n        'steps': Dataset({\n            'action': Tensor(shape=(7,), dtype=float32),\n            'discount': Scalar(shape=(), dtype=float32),\n            'is_first': bool,\n            'is_last': bool,\n            'is_terminal': bool,\n            'language_embedding': Tensor(shape=(512,), dtype=float32),\n            'language_instruction': Text(shape=(), dtype=string),\n            'observation': FeaturesDict({\n                'image': Image(shape=(480, 640, 3), dtype=uint8),\n                'state': Tensor(shape=(12,), dtype=float32),\n            }),\n            'reward': Scalar(shape=(), dtype=float32),\n        }),\n    }),\n    supervised_keys=None,\n    disable_shuffling=False,\n    splits={\n        'train': <SplitInfo num_examples=107, num_shards=16>,\n    },\n    citation=\"\"\"@article{padalkar2023guided,\n      title={A guided reinforcement learning approach using shared control templates for learning manipulation skills in the real world},\n      author={Padalkar, Abhishek and Quere, Gabriel and Raffin, Antonin and Silv{'e}rio, Jo{\\~a}o and Stulp, Freek},\n      journal={Research square preprint rs-3289569/v1},\n      year={2023}\n    }\"\"\",\n)",
+  "size": "1.65 GiB",
+  "n_traj": 107,
+  "image_keys": {
+    "image": [
+      480,
+      640,
+      3
+    ]
+  },
+  "depth_keys": {},
+  "text_keys": []
+}
